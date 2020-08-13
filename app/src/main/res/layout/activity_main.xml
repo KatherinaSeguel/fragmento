@@ -11,7 +11,8 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/image_left_margin"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="@dimen/image_left_margin"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,6 +21,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_surprised_pikachu_meme" />
 
+    <fragment
+        android:name="com.crisspian.fragment_guide_01.FistFragment"
+        android:layout_width="395dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.197" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
