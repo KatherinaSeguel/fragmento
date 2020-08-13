@@ -41,7 +41,12 @@ private ActivityMainBinding binding;
         FragmentTransaction fragmentTransaction =frangManager.beginTransaction();
         //añadir fragmento a la pila o memoria
         //añadir el fragmento y lo asociamos al contenedor donde se mostrará
-        fragmentTransaction.add(R.id.Contentfragment,firstfrangment).addToBackStack(null).commit();
+        fragmentTransaction.add(R.id.Contentfragment,firstfrangment)
+               // .addToBackStack(null)
+                .commit();
+                //si comento addToBackStack no hay nada en pila y si presiona botón hacia atrás se cierra el programa
+                //no almacena lo que tiene la pila y las veces que presione el botón.
+
 
 
     }
