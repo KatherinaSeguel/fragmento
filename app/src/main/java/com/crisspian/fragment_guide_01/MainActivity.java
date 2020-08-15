@@ -33,6 +33,7 @@ public static final String KEY_ONE="KEY_ONE";
         setContentView(binding.getRoot());
 
         if(savedInstanceState!=null){
+
            isFragmeentShow=savedInstanceState.getBoolean(KEY_ONE);
            binding.button.setText(savedInstanceState.getString(KEY_TWO,"ups"));
 
@@ -49,7 +50,7 @@ public static final String KEY_ONE="KEY_ONE";
     public void onClick(View v) {
 
         if (!isFragmeentShow){
-            showFragmento();
+            showFragmento("Hola loco...");
         }  else {
             closeFragment();
         }
@@ -61,10 +62,10 @@ public static final String KEY_ONE="KEY_ONE";
 
     //metodo
 
-    private void showFragmento(){
+    private void showFragmento(String saludo){
 
         //generamos la instancia del fragmento
-       FistFragment firstfrangment =FistFragment.newInstance("","");
+       FistFragment firstfrangment =FistFragment.newInstance(saludo);
         //necesitamos obtener la instancia del Fergment,anager
         FragmentManager frangManager=getSupportFragmentManager();
         //obtenemos e instanciamos la transacción
