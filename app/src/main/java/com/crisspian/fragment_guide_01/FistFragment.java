@@ -8,12 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.crisspian.fragment_guide_01.databinding.FragmentFistBinding;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link FistFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class FistFragment extends Fragment {
+    private FragmentFistBinding mBinding;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -65,5 +68,8 @@ public class FistFragment extends Fragment {
         //DONDE ESTOY PArado en el fragmento, no es this
        // getContext()
         //getActivity()
+
+        mBinding= FragmentFistBinding.inflate(inflater,container,false);
+        return  mBinding.getRoot();
     }
 }
